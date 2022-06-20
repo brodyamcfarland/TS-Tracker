@@ -1,0 +1,228 @@
+.input {
+    display: flex;
+    width: 40%;
+    position: relative;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.input__box {
+    width: 100%;
+    border-radius: 2.5rem;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    border: none;
+    transition: .4s;
+    box-shadow: inset 0 0 5px black;
+}
+
+.input__box:focus {
+    box-shadow: 0 0 10px 1px black;
+    outline: none;
+}
+
+.input__submit {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: .5rem;
+    border-radius: 2.5rem;
+    right: 0px;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #db2653;
+    color: white;
+    transition: 0.3s ease-in-out all;
+    box-shadow: 0 0 10px black;
+}
+
+.input__submit:hover {
+    background-color: #f5517a;
+    transform: scale(.9);
+}
+
+.input__submit:active {
+    transform: scale(0.8);
+    box-shadow: 0 0 5px black;
+}
+
+.tasklist__container {
+    display: flex;
+    width: 95%;
+    margin-top: .8rem;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.task__heading {
+    color: white;
+    padding: .5rem;
+    text-transform: uppercase
+}
+
+.task__active {
+    width: 47%;
+    background-image: linear-gradient(.25turn, rgb(84, 196, 149), 1%, rgb(0, 0, 0));
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px black;
+}
+
+.task__completed {
+    width: 47%;
+    background-color: rgb(255, 0, 0);
+    background-image: linear-gradient(.25turn, rgb(192, 71, 71), 1%, rgb(0, 0, 0));
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px black;
+}
+
+.tasks {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    background-color: aquamarine;
+}
+
+.tasks_single {
+    display: flex;
+    width: 95%;
+    border-radius: 1rem;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    background-image: linear-gradient(.25turn, rgb(49, 56, 85), 10%, rgb(82, 81, 102));
+    color: whitesmoke;
+    box-shadow: 0 0 10px black;
+}
+
+.tasks_single--text {
+    flex: 1;
+    padding: 1rem;
+    border: none;
+    font-size: 1.1rem;
+    overflow-wrap: break-word;
+    border-radius: 1rem;
+    margin-right: 1rem;
+}
+
+.tasks_single:hover {
+    background-image: linear-gradient(.25turn, rgb(33, 37, 56), 10%, rgb(52, 51, 65));
+}
+
+.tasks_single--text:focus {
+    outline: none;
+    box-shadow: inset 0 0 .5rem black;
+}
+
+.icon_container {
+    display: grid;
+    grid-auto-flow: row;
+    gap: 1rem;
+    font-size: 1.1rem;
+}
+
+.icons {
+    transition: .5s ease-in-out all;
+}
+
+.icons:hover {
+    color: #db2653;
+    transform: scale(1.3);
+}
+
+.icons.done:hover {
+    color: green;
+}
+
+.icons.edit:hover {
+    color: #fffc4a;
+}
+
+.drag {
+    box-shadow: 0 0 5rem black;
+}
+
+/*===================================MEDIA QUERIES==============================================*/
+/*Tablets [601px -> 1200px]*/
+@media only screen and (max-width: 1200px){
+    .tasks_single {
+        width: 80%;
+    }
+
+    .tasks_single--text {
+        transform: scale(.7);
+    }
+
+}
+/*Big smartphones [426px -> 600px]*/
+@media only screen and (max-width: 600px){
+
+    .tasks_single {
+        width: 83%;
+        padding-left: 3rem;
+        padding-right: 1.5rem;
+    }
+
+    .tasks_single--text {
+        transform: scale(.8);
+    }
+
+    .tasklist__container {
+        width: 95%;
+        flex-direction: column;
+    }
+
+    .task__active {
+        width: 93%;
+        padding: 1rem;
+    }
+    
+    .task__completed {
+        width: 93%;
+    }
+
+    .input {
+        width: 80%;
+    }
+}
+/*Small smartphones [325px -> 425px]*/
+@media only screen and (max-width: 425px){
+	.tasks_single {
+        width: 100%;
+        padding-left: 4rem;
+        padding-right: 0.8rem;
+    }
+    .icon_container {
+        padding-left: 3rem;
+    }
+
+    .task__active {
+        width: 90%;
+        padding: 1rem;
+    }
+    
+    .task__completed {
+        width: 90%;
+        padding: 1rem;
+    }
+    .tasks_single {
+        width: 95%;
+        padding-left: 0;
+        padding-right: 1rem;
+    }
+    .tasks_single--text {
+        flex: 1;
+        padding-left: 0.5rem;
+        font-size: 1rem;
+        border-radius: 1rem;
+        margin-right: 0rem;
+        transform: scale(.9);
+        padding-right: 1rem;
+    }
+
+    .icon_container {
+        padding: 0;
+    }
+}
