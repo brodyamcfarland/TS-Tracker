@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/TS-Tracker/static/css/main.beee3e1c.css",
+    "main.js": "/TS-Tracker/static/js/main.13bf475c.js",
+    "index.html": "/TS-Tracker/index.html",
+    "main.beee3e1c.css.map": "/TS-Tracker/static/css/main.beee3e1c.css.map",
+    "main.13bf475c.js.map": "/TS-Tracker/static/js/main.13bf475c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.beee3e1c.css",
+    "static/js/main.13bf475c.js"
+  ]
+}
